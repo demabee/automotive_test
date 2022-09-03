@@ -1,0 +1,31 @@
+.title {
+  color: #fff;
+}
+
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+}
+
+.button_secondary {
+  background-color: transparent;
+  padding: 10px 30px;
+  color: var(--color-light-blue);
+  border: 1px solid var(--color-light-blue);
+  border-radius: 20px;
+}
+
+.title_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  padding-right: 10px;
+}
