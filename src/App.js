@@ -1,10 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import SideNavigation from "./components/SideNavigation/SideNavigation";
 import Home from './pages/Home/Home';
 import MarketPlace from './pages/Marketplace/Marketplace';
 import './App.css';
 
 const App = () => {
+  const location = useLocation();
   return (
     <div className="App">
       <SideNavigation />

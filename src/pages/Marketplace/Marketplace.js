@@ -2,6 +2,7 @@ import Card from '../../components/Card/Card';
 import styles from './Marketplace.module.css';
 import HouseImage from '../../assets/images/house.png';
 import { FiFilter } from 'react-icons/fi';
+import { MARKETPLACE_ITEMS } from '../../helpers/mockup-data';
 
 const MarketPlace = () => {
   return (
@@ -16,22 +17,18 @@ const MarketPlace = () => {
         </div>
       </div>
       <div className={styles.card_container}>
-        <Card
-          title="Project #0"
-          address="San Francisco, CA"
-          status="Available"
-          image={HouseImage} 
-          progress="60"
-          projected_irr="18.6%"
-          cash_payout="6.44%" />
-        <Card
-          title="Project #1"
-          address="San Jose, CA"
-          status="Sold"
-          image={HouseImage} 
-          progress="90"
-          projected_irr="18.6%"
-          cash_payout="6.44%" />
+        {MARKETPLACE_ITEMS.map((data, index) => {
+          return (<Card
+            title={data.title}
+            address={data.address}
+            status={data.status}
+            image={data.image} 
+            progress={data.progress}
+            projected_irr={data.projected_irr}
+            cash_payout={data.cash_payout}
+          />)
+        })
+        }
       </div>
     </>
   );

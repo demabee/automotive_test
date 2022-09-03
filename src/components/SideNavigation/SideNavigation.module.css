@@ -1,6 +1,4 @@
 .container {
   flex: 1;
   background-color: var(--color-dark-blue);
-  width: 200px;
-  height: 100vh;
 }
